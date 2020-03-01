@@ -1,19 +1,19 @@
 import React, {Component} from "react";
 
-import { List,Menu, Icon, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
-
+import { List,Menu, Icon, Grid, Header, Image, Segment  } from 'semantic-ui-react'
+import MessageComp from "./Message_com";
 
 class ContactUs extends Component{
     state = { activeItem: "" };
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name });
     render() {
-        const { activeItem } = this.state
+        const { activeItem } = this.state;
         return <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
             <Grid.Row>
-                <Grid.Column style={{minWidth:450, maxWidth: 450 }}>
+                <Grid.Column style={{minWidth:450, maxWidth: 450, align: "center" }}>
                     <Header as='h1' color='teal' textAlign='center'>
-                        צרו קשר  <Image src='./logo1.png'  />
+                        צרו קשר  <Image key="contact_header1_img" src='./logo1.png'  />
                     </Header>
 
                     <Segment stacked>
@@ -46,44 +46,11 @@ class ContactUs extends Component{
                             </List.Item>
                         </List>
                     </Segment>
-
-                    <Message>
-                        developed by :
-                        <List horizontal>
-                            <List.Item>
-                                <Image avatar src='./avatar1.png' />
-                                <List.Content>
-                                    <List.Header>Dor Zion</List.Header>
-                                    (description)
-                                </List.Content>
-                            </List.Item>
-                            <List.Item>
-                                <Image avatar src='/images/avatar/small/christian.jpg' />
-                                <List.Content>
-                                    <List.Header>Omer Hindi</List.Header>
-                                    (description)
-                                </List.Content>
-                            </List.Item>
-                            <List.Item>
-                                <Image avatar src='/images/avatar/small/matt.jpg' />
-                                <List.Content>
-                                    <List.Header>Roy Goldenbarg</List.Header>
-                                    (description)
-                                </List.Content>
-                            </List.Item>
-                            <List.Item>
-                                <Image avatar src='/images/avatar/small/matt.jpg' />
-                                <List.Content>
-                                    <List.Header>Shimon Elfassy</List.Header>
-                                    (description)
-                                </List.Content>
-                            </List.Item>
-                        </List>
-                    </Message>
-
+                    <MessageComp items= {[{text: "developed by:"},{name:"Dor Zion",description: "desc",picture:"./avatar_dor.png"},{name:"Roy Goldenberg",description: "desc",picture:"./avatar_roy.png"},{name:"Omer Hindy",description: "desc",picture:"./avatar_omer.png"}]}/>
 
                 </Grid.Column>
-                <Menu icon vertical fixed={"right"} style={{maxHeight:50,minHeight:150,marginTop:175 }}>
+     
+                <Menu icon vertical fixed={"right"} style={{maxHeight:50,minHeight:120,marginTop:175 }}>
                     <Menu.Item
                         name='facebook_bot'
                         active={activeItem === 'facebook_bot'}
@@ -96,7 +63,10 @@ class ContactUs extends Component{
                         name='telegram_bot'
                         active={activeItem === 'telegram_bot'}
                         onClick={this.handleItemClick}
+                        href='https://t.me/Tikshuv1bot'
+                        target="_blank"
                     >
+
                         <Icon name='telegram' />
                     </Menu.Item>
 
