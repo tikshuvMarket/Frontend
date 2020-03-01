@@ -11,7 +11,10 @@ class ContactUs extends Component{
         const { activeItem } = this.state;
         return <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
             <Grid.Row>
-                <Grid.Column style={{minWidth:450, maxWidth: 450, align: "center" }}>
+                <Grid.Column style={{minWidth:350, maxWidth: 350, aligned:"left" }}>
+                    <MessageComp items= {[{text: "developed by:"},{name:"Dor Zion",description: "desc",picture:"./avatar_dor.png"},{name:"Roy Goldenberg",description: "desc",picture:"./avatar_roy.png"},{name:"Omer Hindy",description: "desc",picture:"./avatar_omer.png"}]}/>
+                </Grid.Column>
+                <Grid.Column style={{minWidth:450, maxWidth: 450, aligned: "center" }}>
                     <Header as='h1' color='teal' textAlign='center'>
                         צרו קשר  <Image key="contact_header1_img" src='./logo1.png'  />
                     </Header>
@@ -49,7 +52,9 @@ class ContactUs extends Component{
                     <MessageComp items= {[{text: "developed by:"},{name:"Dor Zion",description: "desc",picture:"./avatar_dor.png"},{name:"Roy Goldenberg",description: "desc",picture:"./avatar_roy.png"},{name:"Omer Hindy",description: "desc",picture:"./avatar_omer.png"}]}/>
 
                 </Grid.Column>
-     
+                <Grid.Column style={{minWidth:350, maxWidth: 350, aligned: "right" }}>
+                    <MessageComp items= {[{text: "developed by:"},{name:"Dor Zion",description: "desc",picture:"./avatar_dor.png"},{name:"Roy Goldenberg",description: "desc",picture:"./avatar_roy.png"},{name:"Omer Hindy",description: "desc",picture:"./avatar_omer.png"}]}/>
+                </Grid.Column>
                 <Menu icon vertical fixed={"right"} style={{maxHeight:50,minHeight:120,marginTop:175 }}>
                     <Menu.Item
                         name='facebook_bot'
