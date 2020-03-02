@@ -19,13 +19,16 @@ class App extends Component {
     return (
       <>
         <Router>
-          <Segment inverted>
+          <Segment inverted style={{ direction: "rtl",
+            position: "fixed",
+            width: "100%",
+            zIndex : "11111"
+          }}>
             <Menu
               inverted
               pointing
               secondary
               tabular
-              style={{ direction: "rtl" }}
             >
               <Link to="/home">
                 <Menu.Item
