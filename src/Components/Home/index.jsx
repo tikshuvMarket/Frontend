@@ -4,7 +4,7 @@ import {Grid, Image} from "semantic-ui-react";
 const Home = () => {
     return (
         <Grid centered columns={3}>
-            <Grid.Row>
+            <Grid.Row style={{marginTop: "5%"}}>
                 <Image
                     size="small"
                     src="https://upload.wikimedia.org/wikipedia/he/thumb/6/68/Computer_Service_Directorate.svg/1200px-Computer_Service_Directorate.svg.png"
