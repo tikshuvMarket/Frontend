@@ -9,10 +9,10 @@ class ContactUs extends Component{
     handleItemClick = (e, { name }) => this.setState({ activeItem: name });
     render() {
         const { activeItem } = this.state;
-        return <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+        return <Grid textAlign='center' style={{ height: '100vh',marginTop:"-100px" }} verticalAlign='middle' >
             <Grid.Row>
                 <Grid.Column style={{minWidth:350, maxWidth: 350, aligned:"left" }}>
-                    <MessageComp items= {[{text: "developed by:"},{name:"Dor Zion",description: "desc",picture:"./avatar_dor.png"},{name:"Roy Goldenberg",description: "desc",picture:"./avatar_roy.png"},{name:"Omer Hindy",description: "desc",picture:"./avatar_omer.png"}]}/>
+                    <MessageComp  items= {[{text: "developed by:"},{name:"Yonatan Edelshtain",description: "desc",picture:"./avatar_dor.png"},{name:"Idan Tal-Or",description: "desc",picture:"./avatar_roy.png"},{name:"Dan Godtanshtat",description: "desc",picture:"./avatar_omer.png"},{name:"Yarden Ben-Simon",description: "desc",picture:"./avatar_omer.png"}]}/>
                 </Grid.Column>
                 <Grid.Column style={{minWidth:450, maxWidth: 450, aligned: "center" }}>
                     <Header as='h1' color='teal' textAlign='center'>
@@ -53,7 +53,8 @@ class ContactUs extends Component{
 
                 </Grid.Column>
                 <Grid.Column style={{minWidth:350, maxWidth: 350, aligned: "right" }}>
-                    <MessageComp items= {[{text: "developed by:"},{name:"Dor Zion",description: "desc",picture:"./avatar_dor.png"},{name:"Roy Goldenberg",description: "desc",picture:"./avatar_roy.png"},{name:"Omer Hindy",description: "desc",picture:"./avatar_omer.png"}]}/>
+                    <MessageComp items= {[{text: "developed by:"},{name:"Yarin Shaked",description: "desc",picture:"./avatar_dor.png"},{name:"Ofir Kedem",description: "desc",picture:"./avatar_roy.png"}]}/>
+                    <MessageComp items= {[{text: "developed by:"},{name:"Elia Amar",description: "desc",picture:"./avatar_dor.png"},{name:"Yonatan Harmatz",description: "desc",picture:"./avatar_roy.png"}]}/>
                 </Grid.Column>
                 <Menu icon vertical fixed={"right"} style={{maxHeight:50,minHeight:120,marginTop:175 }}>
                     <Menu.Item
