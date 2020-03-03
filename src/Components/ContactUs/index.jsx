@@ -18,13 +18,9 @@ class ContactUs extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Grid
-        textAlign="center"
-        // style={{ marginTop: "100px" }}
-        verticalAlign="middle"
-      >
+      <Grid textAlign="center" verticalAlign="middle">
+        <Grid.Row style={{ height: "150px" }}></Grid.Row>
         <Grid.Row>
-          <Grid.Row style={{ height: "500px" }}></Grid.Row>
           <Grid.Column
             style={{ minWidth: 350, maxWidth: 350, aligned: "left" }}
           >
@@ -61,38 +57,6 @@ class ContactUs extends Component {
               צרו קשר <Image key="contact_header1_img" src="./logo1.png" />
             </Header>
 
-            <Segment stacked>
-              <List>
-                <List.Item>
-                  <List.Icon name="users" />
-                  <List.Content>Semantic UI</List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name="marker" />
-                  <List.Content>New York, NY</List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name="mail" />
-                  <List.Content>
-                    <a href="mailto:jack@semantic-ui.com">
-                      jack@semantic-ui.com
-                    </a>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name="linkify" />
-                  <List.Content>
-                    <a href="http://www.semantic-ui.com">semantic-ui.com</a>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name="phone" />
-                  <List.Content>
-                    <a href="http://www.semantic-ui.com">0X-XXXXXXXX</a>
-                  </List.Content>
-                </List.Item>
-              </List>
-            </Segment>
             <MessageComp
               items={[
                 { text: "developed by:" },
@@ -152,7 +116,7 @@ class ContactUs extends Component {
             icon
             vertical
             fixed={"right"}
-            style={{ maxHeight: 50, minHeight: 120, marginTop: 175 }}
+            style={{ maxHeight: 240, minHeight: 120, marginTop: 175 }}
           >
             <Menu.Item
               name="facebook_bot"
@@ -178,6 +142,32 @@ class ContactUs extends Component {
               onClick={this.handleItemClick}
             >
               <Icon name="whatsapp" />
+            </Menu.Item>
+            <Menu.Item
+              name="facebook"
+              active={activeItem === "facebook"}
+              onClick={this.handleItemClick}
+              href="https://www.facebook.com/TikshuvIDF"
+              target="_blank"
+            >
+              <Icon name="facebook" />
+            </Menu.Item>
+            <Menu.Item
+              name="website"
+              active={activeItem === "website"}
+              onClick={this.handleItemClick}
+              href="https://www.idf.il/%D7%90%D7%AA%D7%A8%D7%99%D7%9D/%D7%90%D7%92%D7%A3-%D7%94%D7%AA%D7%A7%D7%A9%D7%95%D7%91-%D7%95%D7%94%D7%94%D7%92%D7%A0%D7%94-%D7%91%D7%A1%D7%91%D7%A8/"
+              target="_blank"
+            >
+              <Icon name="globe" />
+            </Menu.Item>
+            <Menu.Item
+              name="email"
+              active={activeItem === "email"}
+              onClick={this.handleItemClick}
+              href="mailto: iturik@idf.gov.il"
+            >
+              <Icon name="envelope outline" />
             </Menu.Item>
           </Menu>
         </Grid.Row>

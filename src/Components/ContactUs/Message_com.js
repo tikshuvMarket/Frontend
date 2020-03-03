@@ -30,38 +30,3 @@ function MessageComp(props) {
 }
 
 export default MessageComp;
-
-/*<Message>
-    developed by :
-    <List horizontal>
-        <List.Item>
-            <Image avatar src='./avatar_dor.png' />
-            <List.Content>
-                <List.Header>Dor Zion</List.Header>
-                (description)
-            </List.Content>
-        </List.Item>
-        <List.Item>
-            <Image avatar src='/images/avatar/small/christian.jpg' />
-            <List.Content>
-                <List.Header>Omer Hindi</List.Header>
-                (description)
-            </List.Content>
-        </List.Item>
-        <List.Item>
-            <Image avatar src='/images/avatar/small/matt.jpg' />
-            <List.Content>
-                <List.Header>Roy Goldenberg</List.Header>
-                (description)
-            </List.Content>
-        </List.Item>
-        <List.Item>
-            <Image avatar src='/images/avatar/small/matt.jpg' />
-            <List.Content>
-                <List.Header>Shimon Elfassy</List.Header>
-                (description)
-            </List.Content>
-        </List.Item>
-    </List>
-</Message>
-*/
