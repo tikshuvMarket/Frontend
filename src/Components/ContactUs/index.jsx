@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 
-import {
-  List,
-  Menu,
-  Icon,
-  Grid,
-  Header,
-  Image,
-  Segment
-} from "semantic-ui-react";
+import { Menu, Icon, Grid, Header, Image } from "semantic-ui-react";
 import MessageComp from "./Message_com";
 
 class ContactUs extends Component {
@@ -19,7 +11,7 @@ class ContactUs extends Component {
     const { activeItem } = this.state;
     return (
       <Grid textAlign="center" verticalAlign="middle">
-        <Grid.Row style={{ height: "150px" }}></Grid.Row>
+        <Grid.Row style={{ height: "50px" }}></Grid.Row>
         <Grid.Row>
           <Grid.Column
             style={{ minWidth: 350, maxWidth: 350, aligned: "left" }}
