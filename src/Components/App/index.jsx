@@ -65,7 +65,7 @@ class App extends Component {
           </Segment>
 
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
             <Route path="/gallery">
